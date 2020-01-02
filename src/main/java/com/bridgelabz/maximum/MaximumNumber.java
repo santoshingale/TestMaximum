@@ -1,20 +1,28 @@
 package com.bridgelabz.maximum;
 
 public class MaximumNumber {
-    /*public static void main(String[] args) {
-        Integer a=5,b=8,c=1;
-        Integer max = findMaximumNumber( a, b, c);
-        System.out.println(max);
-    }*/
 
-    public static Integer findMaximumNumber(Integer a, Integer b, Integer c) {
-        Integer max = a;
-        if( b.compareTo(max) > 0 ) {
-            max = b;
+    public static Integer findMaximumIntegerNumber(Integer first, Integer second, Integer third) {
+        Integer max = first;
+        if( second.compareTo(max) > 0 ) {
+            max = second;
         }
-        if( c.compareTo(max) > 0 ) {
-            max = c;
+        if( third.compareTo(max) > 0 ) {
+            max = third;
         }
         return max;
     }
+
+    public static Float findMaximumFloatNumber(Float first, Float second, Float third) {
+        Float max = first;
+        if( second.compareTo(max) > 0 ) {
+            max = second;
+        }
+        if( third.compareTo(max) > 0 ) {
+            max = third;
+        }
+        return max;
+    }
+
+
 }
