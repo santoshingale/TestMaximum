@@ -59,4 +59,22 @@ public class TestMaximum {
         Float maximumNumber = MaximumNumber.findMaximumFloatNumber(first, second, third);
         Assert.assertEquals(third,maximumNumber);
     }
+
+    @Test
+    public void whenGiven_threeString_ifFirstIsGreater_shouldReturnFirstString() {
+        String maximumStringValue = MaximumNumber.findMaximumStringValue("Peach", "Banana", "Apple");
+        Assert.assertEquals("Peach", maximumStringValue);
+    }
+
+    @Test
+    public void whenGiven_threeString_ifSecondIsGreater_shouldReturnSecondString() {
+        String maximumStringValue = MaximumNumber.findMaximumStringValue("Banana","Peach","Apple");
+        Assert.assertEquals("Peach", maximumStringValue);
+    }
+
+    @Test
+    public void whenGiven_threeString_ifThirdIsGreater_shouldReturnThirdString() {
+        String maximumStringValue = MaximumNumber.findMaximumStringValue("Banana","Apple","Peach");
+        Assert.assertEquals("Peach", maximumStringValue);
+    }
 }
