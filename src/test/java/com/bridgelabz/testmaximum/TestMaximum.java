@@ -11,7 +11,7 @@ public class TestMaximum {
         Integer first = 30;
         Integer second = 10;
         Integer third = 20;
-        Integer maximumNumber = MaximumNumber.findMaximumIntegerNumber(first, second, third);
+        Integer maximumNumber = MaximumNumber.findMaximum(first, second, third);
         Assert.assertEquals(first,maximumNumber);
     }
 
@@ -20,7 +20,7 @@ public class TestMaximum {
         Integer first = 30;
         Integer second = 40;
         Integer third = 20;
-        Integer maximumNumber = MaximumNumber.findMaximumIntegerNumber(first, second, third);
+        Integer maximumNumber = MaximumNumber.findMaximum(first, second, third);
         Assert.assertEquals(second,maximumNumber);
     }
 
@@ -29,7 +29,7 @@ public class TestMaximum {
         Integer first = 30;
         Integer second = 10;
         Integer third = 40;
-        Integer maximumNumber = MaximumNumber.findMaximumIntegerNumber(first, second, third);
+        Integer maximumNumber = MaximumNumber.findMaximum(first, second, third);
         Assert.assertEquals(third,maximumNumber);
     }
 
@@ -38,7 +38,7 @@ public class TestMaximum {
         Float first = 10.50f;
         Float second = 10.40f;
         Float third = 10.20f;
-        Float maximumNumber = MaximumNumber.findMaximumFloatNumber(first, second, third);
+        Float maximumNumber = MaximumNumber.findMaximum(first, second, third);
         Assert.assertEquals(first,maximumNumber);
     }
 
@@ -47,7 +47,7 @@ public class TestMaximum {
         Float first = 10.10f;
         Float second = 10.40f;
         Float third = 10.20f;
-        Float maximumNumber = MaximumNumber.findMaximumFloatNumber(first, second, third);
+        Float maximumNumber = MaximumNumber.findMaximum(first, second, third);
         Assert.assertEquals(second,maximumNumber);
     }
 
@@ -56,25 +56,25 @@ public class TestMaximum {
         Float first = 10.10f;
         Float second = 10.20f;
         Float third = 10.30f;
-        Float maximumNumber = MaximumNumber.findMaximumFloatNumber(first, second, third);
+        Float maximumNumber = MaximumNumber.findMaximum(first, second, third);
         Assert.assertEquals(third,maximumNumber);
     }
 
     @Test
     public void whenGiven_threeString_ifFirstIsGreater_shouldReturnFirstString() {
-        String maximumStringValue = MaximumNumber.findMaximumStringValue("Peach", "Banana", "Apple");
+        String maximumStringValue = MaximumNumber.findMaximum("Peach", "Banana", "Apple");
         Assert.assertEquals("Peach", maximumStringValue);
     }
 
     @Test
     public void whenGiven_threeString_ifSecondIsGreater_shouldReturnSecondString() {
-        String maximumStringValue = MaximumNumber.findMaximumStringValue("Banana","Peach","Apple");
+        String maximumStringValue = MaximumNumber.findMaximum("Banana","Peach","Apple");
         Assert.assertEquals("Peach", maximumStringValue);
     }
 
     @Test
     public void whenGiven_threeString_ifThirdIsGreater_shouldReturnThirdString() {
-        String maximumStringValue = MaximumNumber.findMaximumStringValue("Banana","Apple","Peach");
+        String maximumStringValue = MaximumNumber.findMaximum("Banana","Apple","Peach");
         Assert.assertEquals("Peach", maximumStringValue);
     }
 }
