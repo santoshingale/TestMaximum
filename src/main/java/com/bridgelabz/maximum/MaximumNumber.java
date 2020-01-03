@@ -1,28 +1,21 @@
 package com.bridgelabz.maximum;
 
-public class MaximumNumber < T extends Comparable > {
-    T first;
-    T second;
-    T third;
+import java.util.Arrays;
 
-    public MaximumNumber(T first, T second, T third) {
-        this.first = first;
-        this.second = second;
-        this.third = third;
+public class MaximumNumber < T extends Comparable > {
+
+    T[] array;
+
+    public MaximumNumber( T ...array ) {
+        this.array = array;
     }
 
     public T testMaximum() {
-        return testMaximum(first,second,third);
+        return testMaximum( array );
     }
 
-    public static < E extends Comparable > E testMaximum(E first, E second, E third) {
-        E max = first;
-        if( second.compareTo(max) > 0 ) {
-            max = second;
-        }
-        if( third.compareTo(max) > 0 ) {
-            max = third;
-        }
-        return max;
+    public static < T extends Comparable > T testMaximum( T ...array ) {
+        Arrays.sort(array);
+        return array[ array.length-1 ];
     }
 }
