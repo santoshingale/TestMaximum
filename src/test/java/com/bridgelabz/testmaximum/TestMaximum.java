@@ -158,4 +158,28 @@ public class TestMaximum {
         Comparable comparable = maximumNumber.testMaximum();
         Assert.assertEquals("Peach",comparable);
     }
+
+    @Test
+    public void whenGiven_fiveIntegerNumber_ifFifthIsGreater_byUsingGeneric_shouldReturnFifthNumber() {
+        MaximumNumber maximumNumber = new MaximumNumber(30, 20, 25, 10, 50 );
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals(50,comparable);
+    }
+
+    @Test
+    public void whenGiven_fiveFloatNumber_ifForthIsGreater_byUsingGeneric_shouldReturnForthNumber() {
+        Float first = 10.50f;
+        Float second = 10.40f;
+        Float third = 10.20f;
+        MaximumNumber maximumNumber = new MaximumNumber(10.50f, 10.40f, 10.20f, 10.90f, 10.01f );
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals(10.90f,comparable);
+    }
+
+    @Test
+    public void whenGiven_fiveString_ifFirstIsGreater_byUsingGeneric_shouldReturnFirstString() {
+        MaximumNumber maximumNumber = new MaximumNumber("Peach", "Banana", "Apple", "Orange", "Mango" );
+        Comparable comparable = maximumNumber.testMaximum();
+        Assert.assertEquals("Peach",comparable);
+    }
 }
