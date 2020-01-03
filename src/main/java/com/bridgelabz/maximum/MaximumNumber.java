@@ -14,8 +14,14 @@ public class MaximumNumber < T extends Comparable > {
         return testMaximum( array );
     }
 
+    public static < T > void printMax( T max ) {
+        System.out.println(max);
+    }
+
     public static < T extends Comparable > T testMaximum( T ...array ) {
         Arrays.sort(array);
-        return array[ array.length-1 ];
+        T max = array[ array.length - 1 ];
+        printMax(max);
+        return max;
     }
 }
